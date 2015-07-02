@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[James Guo Blog]]></title>
-  <link href="http://jamesguo.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Android | James Guo Blog]]></title>
+  <link href="http://jamesguo.github.io/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://jamesguo.github.io/"/>
   <updated>2015-07-02T16:48:00+08:00</updated>
   <id>http://jamesguo.github.io/</id>
@@ -18,15 +18,6 @@
     <link href="http://jamesguo.github.io/blog/2015/07/02/android-native-crashshou-ji/"/>
     <updated>2015-07-02T16:47:35+08:00</updated>
     <id>http://jamesguo.github.io/blog/2015/07/02/android-native-crashshou-ji</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[开篇]]></title>
-    <link href="http://jamesguo.github.io/blog/2015/07/02/kai-pian/"/>
-    <updated>2015-07-02T15:19:25+08:00</updated>
-    <id>http://jamesguo.github.io/blog/2015/07/02/kai-pian</id>
     <content type="html"><![CDATA[
 ]]></content>
   </entry>

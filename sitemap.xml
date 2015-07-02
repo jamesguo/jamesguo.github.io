@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://jamesguo.github.io/blog/2015/07/02/android-native-crashshou-ji/</loc>
+    <lastmod>2015-07-02T16:47:35+08:00</lastmod>
+  </url>
+  <url>
     <loc>http://jamesguo.github.io/blog/2015/07/02/kai-pian/</loc>
     <lastmod>2015-07-02T15:19:25+08:00</lastmod>
   </url>
@@ -18,5 +22,8 @@
   </url>
   <url>
     <loc>http://jamesguo.github.io/super-awesome/</loc>
+  </url>
+  <url>
+    <loc>http://jamesguo.github.io/blog/categories/android/</loc>
   </url>
 </urlset>
