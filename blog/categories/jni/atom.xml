@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Jni | James Guo Blog]]></title>
   <link href="http://jamesguo.github.io/blog/categories/jni/atom.xml" rel="self"/>
   <link href="http://jamesguo.github.io/"/>
-  <updated>2015-07-03T16:10:26+08:00</updated>
+  <updated>2015-07-03T16:42:31+08:00</updated>
   <id>http://jamesguo.github.io/</id>
   <author>
     <name><![CDATA[James Guo]]></name>
@@ -20,7 +20,7 @@
     <id>http://jamesguo.github.io/blog/2015/07/03/ndkkai-fa-chang-jian-cuo-wu</id>
     <content type="html"><![CDATA[<h3>NDK编译问题（持续更新……）</h3>
 
-<blockquote><p>GetEnv问题</p></blockquote>
+<h5>GetEnv问题</h5>
 
 <ol>
 <li><p>C++ 使用代码格式
@@ -39,7 +39,7 @@ int getEnvStat = (*vm)-&gt;GetEnv(vm, (void **) &amp;env, JNI_VERSION_1_6);
 <!-- more -->
 
 
-<blockquote><p>日志输出</p></blockquote>
+<h5>日志输出</h5>
 
 <ol>
 <li>日志定义

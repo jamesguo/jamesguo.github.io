@@ -9,8 +9,10 @@
   <meta name="author" content="James Guo">
 
   
-  <meta name="description" content="NDK编译问题（持续更新……） GetEnv问题 C++ 使用代码格式 clazz = env-&gt;FindClass(env,kClassBoa);
-int getEnvStat = vm-&gt;GetEnv((void **) &amp;env, JNI_VERSION_1_6); C &hellip;">
+  <meta name="description" content="NDK编译问题（持续更新……） GetEnv问题 C++ 使用代码格式 1
+2
+clazz = env-&gt;FindClass(env,kClassBoa);
+int getEnvStat = vm-&gt;GetEnv((void **) &env, JNI_VERSION_1_6); C &hellip;">
   
   <meta name="baidu-site-verification" content="iDlNtMGP4g" />
   <!-- http://t.co/dKP3o1e -->
@@ -112,20 +114,30 @@ $(document).bind('DOMNodeInserted', function(event) {
 
   <div class="entry-content"><h3>NDK编译问题（持续更新……）</h3>
 
-<blockquote><p>GetEnv问题</p></blockquote>
+<h5>GetEnv问题</h5>
 
 <ol>
-<li><p>C++ 使用代码格式
-<code>
-clazz = env-&gt;FindClass(env,kClassBoa);
-int getEnvStat = vm-&gt;GetEnv((void **) &amp;env, JNI_VERSION_1_6);
-</code></p></li>
-<li><p>C 使用代码格式
-<code>
-clazz = (*env)-&gt;FindClass(env,kClassBoa);
-int getEnvStat = (*vm)-&gt;GetEnv(vm, (void **) &amp;env, JNI_VERSION_1_6);
-</code></p></li>
+<li>C++ 使用代码格式</li>
 </ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>clazz = env-&gt;FindClass(env,kClassBoa);
+</span><span class='line'>int getEnvStat = vm-&gt;GetEnv((void **) &env, JNI_VERSION_1_6);</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>C 使用代码格式</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>clazz = (*env)-&gt;FindClass(env,kClassBoa);
+</span><span class='line'>int getEnvStat = (*vm)-&gt;GetEnv(vm, (void **) &env, JNI_VERSION_1_6);</span></code></pre></td></tr></table></div></figure>
+
+
 
 
 </div>

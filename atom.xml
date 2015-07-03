@@ -4,7 +4,7 @@
   <title><![CDATA[James Guo Blog]]></title>
   <link href="http://jamesguo.github.io/atom.xml" rel="self"/>
   <link href="http://jamesguo.github.io/"/>
-  <updated>2015-07-03T16:10:26+08:00</updated>
+  <updated>2015-07-03T16:42:31+08:00</updated>
   <id>http://jamesguo.github.io/</id>
   <author>
     <name><![CDATA[James Guo]]></name>
@@ -20,26 +20,36 @@
     <id>http://jamesguo.github.io/blog/2015/07/03/ndkkai-fa-chang-jian-cuo-wu</id>
     <content type="html"><![CDATA[<h3>NDK编译问题（持续更新……）</h3>
 
-<blockquote><p>GetEnv问题</p></blockquote>
+<h5>GetEnv问题</h5>
 
 <ol>
-<li><p>C++ 使用代码格式
-<code>
-clazz = env-&gt;FindClass(env,kClassBoa);
-int getEnvStat = vm-&gt;GetEnv((void **) &amp;env, JNI_VERSION_1_6);
-</code></p></li>
-<li><p>C 使用代码格式
-<code>
-clazz = (*env)-&gt;FindClass(env,kClassBoa);
-int getEnvStat = (*vm)-&gt;GetEnv(vm, (void **) &amp;env, JNI_VERSION_1_6);
-</code></p></li>
+<li>C++ 使用代码格式</li>
 </ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>clazz = env-&gt;FindClass(env,kClassBoa);
+</span><span class='line'>int getEnvStat = vm-&gt;GetEnv((void **) &env, JNI_VERSION_1_6);</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>C 使用代码格式</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>clazz = (*env)-&gt;FindClass(env,kClassBoa);
+</span><span class='line'>int getEnvStat = (*vm)-&gt;GetEnv(vm, (void **) &env, JNI_VERSION_1_6);</span></code></pre></td></tr></table></div></figure>
+
+
 
 
 <!-- more -->
 
 
-<blockquote><p>日志输出</p></blockquote>
+<h5>日志输出</h5>
 
 <ol>
 <li>日志定义</li>
