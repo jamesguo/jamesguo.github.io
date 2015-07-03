@@ -4,7 +4,7 @@
   <title><![CDATA[James Guo Blog]]></title>
   <link href="http://jamesguo.github.io/atom.xml" rel="self"/>
   <link href="http://jamesguo.github.io/"/>
-  <updated>2015-07-03T13:57:11+08:00</updated>
+  <updated>2015-07-03T16:10:26+08:00</updated>
   <id>http://jamesguo.github.io/</id>
   <author>
     <name><![CDATA[James Guo]]></name>
@@ -12,6 +12,49 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[NDK开发常见错误]]></title>
+    <link href="http://jamesguo.github.io/blog/2015/07/03/ndkkai-fa-chang-jian-cuo-wu/"/>
+    <updated>2015-07-03T15:00:02+08:00</updated>
+    <id>http://jamesguo.github.io/blog/2015/07/03/ndkkai-fa-chang-jian-cuo-wu</id>
+    <content type="html"><![CDATA[<h3>NDK编译问题（持续更新……）</h3>
+
+<blockquote><p>GetEnv问题</p></blockquote>
+
+<ol>
+<li><p>C++ 使用代码格式
+<code>
+clazz = env-&gt;FindClass(env,kClassBoa);
+int getEnvStat = vm-&gt;GetEnv((void **) &amp;env, JNI_VERSION_1_6);
+</code></p></li>
+<li><p>C 使用代码格式
+<code>
+clazz = (*env)-&gt;FindClass(env,kClassBoa);
+int getEnvStat = (*vm)-&gt;GetEnv(vm, (void **) &amp;env, JNI_VERSION_1_6);
+</code></p></li>
+</ol>
+
+
+<!-- more -->
+
+
+<blockquote><p>日志输出</p></blockquote>
+
+<ol>
+<li>日志定义</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#include &lt;android/log.h&gt;
+</span><span class='line'>#define TAG "HookBridge"
+</span><span class='line'>#define JLOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__)</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[JNI类型总结]]></title>
