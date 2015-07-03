@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Jni | James Guo Blog]]></title>
   <link href="http://jamesguo.github.io/blog/categories/jni/atom.xml" rel="self"/>
   <link href="http://jamesguo.github.io/"/>
-  <updated>2015-07-03T11:47:57+08:00</updated>
+  <updated>2015-07-03T11:49:09+08:00</updated>
   <id>http://jamesguo.github.io/</id>
   <author>
     <name><![CDATA[James Guo]]></name>
@@ -19,8 +19,6 @@
     <updated>2015-07-03T11:10:44+08:00</updated>
     <id>http://jamesguo.github.io/blog/2015/07/03/jnilei-xing-zong-jie</id>
     <content type="html"><![CDATA[<p>JNI 类型映射汇总</p>
-
-<hr />
 
 <blockquote><p>基本数据类型</p></blockquote>
 
@@ -76,8 +74,6 @@
 </tbody>
 </table>
 
-
-<hr />
 
 <blockquote><p>引用数据类型</p></blockquote>
 
@@ -167,8 +163,6 @@
 2、多维数组(包括二维数组)都是引用类型，需要使用 jobjectArray 类型存取其值 ；
 </code></pre>
 
-<hr />
-
 <blockquote><p>基本类型描述符</p></blockquote>
 
 <table>
@@ -223,8 +217,6 @@
 </tbody>
 </table>
 
-
-<hr />
 
 <blockquote><p>引用类型描述符</p></blockquote>
 
@@ -289,8 +281,6 @@ String类型的域描述符为 Ljava/lang/String;
 </tbody>
 </table>
 
-
-<hr />
 
 <blockquote><p>方法描述符</p></blockquote>
 
