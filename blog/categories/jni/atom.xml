@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Jni | James Guo Blog]]></title>
   <link href="http://jamesguo.github.io/blog/categories/jni/atom.xml" rel="self"/>
   <link href="http://jamesguo.github.io/"/>
-  <updated>2015-07-03T16:42:31+08:00</updated>
+  <updated>2015-07-03T17:20:20+08:00</updated>
   <id>http://jamesguo.github.io/</id>
   <author>
     <name><![CDATA[James Guo]]></name>
@@ -54,6 +54,32 @@ int getEnvStat = (*vm)-&gt;GetEnv(vm, (void **) &amp;env, JNI_VERSION_1_6);
 <p>```</p></li>
 </ol>
 
+
+<h5>Crash分析</h5>
+
+<ol>
+<li>日志分析&ndash;arm-linux-androideabi-addr2line</li>
+</ol>
+
+
+<pre><code class="``">  /toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-addr2line -e /obj/local/armeabi-v7a/libhello-jni.so 00000cf4 00000d1c
+</code></pre>
+
+<ol>
+<li>日志分析&ndash;arm-linux-androideabi-objdump</li>
+</ol>
+
+
+<pre><code class="``">  /toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-objdump -S -D /obj/local/armeabi-v7a/libhello-jni.so &gt; /Desktop/dump.log
+</code></pre>
+
+<ol>
+<li>日志分析&ndash;ndk-stack</li>
+</ol>
+
+
+<pre><code class="``">  adb logcat | ndk-stack -sym /obj/local/armeabi-v7a  
+</code></pre>
 ]]></content>
   </entry>
   
