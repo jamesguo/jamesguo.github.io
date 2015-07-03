@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Jni | James Guo Blog]]></title>
   <link href="http://jamesguo.github.io/blog/categories/jni/atom.xml" rel="self"/>
   <link href="http://jamesguo.github.io/"/>
-  <updated>2015-07-03T13:10:38+08:00</updated>
+  <updated>2015-07-03T13:39:16+08:00</updated>
   <id>http://jamesguo.github.io/</id>
   <author>
     <name><![CDATA[James Guo]]></name>
@@ -22,56 +22,52 @@
 
 <blockquote><p>基本数据类型</p></blockquote>
 
-<table>
-<thead>
-<tr>
-<th>Java类型           </th>
-<th style="text-align:center;"> Native类型           </th>
-<th style="text-align:right;">      表述          </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> boolean           </td>
-<td style="text-align:center;"> jboolean    </td>
-<td style="text-align:right;"> unsigned char (无符号8bit整型) </td>
-</tr>
-<tr>
-<td> byte              </td>
-<td style="text-align:center;"> jbyte       </td>
-<td style="text-align:right;">  char (带符号8bit整型) </td>
-</tr>
-<tr>
-<td> char              </td>
-<td style="text-align:center;"> jchar       </td>
-<td style="text-align:right;">    unsigned short (无符号16bit整型) </td>
-</tr>
-<tr>
-<td> short             </td>
-<td style="text-align:center;"> jshort      </td>
-<td style="text-align:right;">     short (带符号16bit整型) </td>
-</tr>
-<tr>
-<td> int               </td>
-<td style="text-align:center;"> jint        </td>
-<td style="text-align:right;">    int (带符号32bit整型) </td>
-</tr>
-<tr>
-<td> long              </td>
-<td style="text-align:center;"> jlong       </td>
-<td style="text-align:right;">    long (带符号64bit整型) </td>
-</tr>
-<tr>
-<td> float             </td>
-<td style="text-align:center;"> jfloat      </td>
-<td style="text-align:right;">    float (浮点型32bit) </td>
-</tr>
-<tr>
-<td> double            </td>
-<td style="text-align:center;"> jdouble     </td>
-<td style="text-align:right;">    double (浮点型64bit) </td>
-</tr>
-</tbody>
+<table class="table table-bordered table-striped table-condensed">
+   <tr>
+      <td>Java&#31867;&#22411;</td>
+      <td>Native&#31867;&#22411;</td>
+      <td>&#34920;&#36848;</td>
+   </tr>
+   <tr>
+      <td>boolean</td>
+      <td>jboolean</td>
+      <td>unsigned char (&#26080;&#31526;&#21495;8bit&#25972;&#22411;) </td>
+   </tr>
+   <tr>
+      <td>byte   </td>
+      <td>jbyte   </td>
+      <td>char (&#24102;&#31526;&#21495;8bit&#25972;&#22411;) </td>
+   </tr>
+   <tr>
+      <td>char   </td>
+      <td>jchar   </td>
+      <td>unsigned short (&#26080;&#31526;&#21495;16bit&#25972;&#22411;)</td>
+   </tr>
+   <tr>
+      <td>short  </td>
+      <td>jshort  </td>
+      <td>short (&#24102;&#31526;&#21495;16bit&#25972;&#22411;) </td>
+   </tr>
+   <tr>
+      <td>int    </td>
+      <td>jint    </td>
+      <td>int (&#24102;&#31526;&#21495;32bit&#25972;&#22411;) </td>
+   </tr>
+   <tr>
+      <td>long   </td>
+      <td>jlong   </td>
+      <td>long (&#24102;&#31526;&#21495;64bit&#25972;&#22411;) </td>
+   </tr>
+   <tr>
+      <td>float  </td>
+      <td>jfloat  </td>
+      <td>float (&#28014;&#28857;&#22411;32bit) </td>
+   </tr>
+   <tr>
+      <td>double </td>
+      <td>jdouble </td>
+      <td>double (&#28014;&#28857;&#22411;64bit) </td>
+   </tr>
 </table>
 
 
