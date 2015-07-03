@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Jni | James Guo Blog]]></title>
   <link href="http://jamesguo.github.io/blog/categories/jni/atom.xml" rel="self"/>
   <link href="http://jamesguo.github.io/"/>
-  <updated>2015-07-03T17:20:20+08:00</updated>
+  <updated>2015-07-03T17:24:46+08:00</updated>
   <id>http://jamesguo.github.io/</id>
   <author>
     <name><![CDATA[James Guo]]></name>
@@ -20,7 +20,7 @@
     <id>http://jamesguo.github.io/blog/2015/07/03/ndkkai-fa-chang-jian-cuo-wu</id>
     <content type="html"><![CDATA[<h3>NDK编译问题（持续更新……）</h3>
 
-<h5>GetEnv问题</h5>
+<h3>GetEnv问题</h3>
 
 <ol>
 <li><p>C++ 使用代码格式
@@ -39,7 +39,7 @@ int getEnvStat = (*vm)-&gt;GetEnv(vm, (void **) &amp;env, JNI_VERSION_1_6);
 <!-- more -->
 
 
-<h5>日志输出</h5>
+<h3>日志输出</h3>
 
 <ol>
 <li>日志定义
@@ -55,31 +55,23 @@ int getEnvStat = (*vm)-&gt;GetEnv(vm, (void **) &amp;env, JNI_VERSION_1_6);
 </ol>
 
 
-<h5>Crash分析</h5>
+<h3>Crash分析</h3>
 
 <ol>
-<li>日志分析&ndash;arm-linux-androideabi-addr2line</li>
+<li><p>日志分析&ndash;arm-linux-androideabi-addr2line
+<code>
+/toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-addr2line -e /obj/local/armeabi-v7a/libhello-jni.so 00000cf4 00000d1c
+</code></p></li>
+<li><p>日志分析&ndash;arm-linux-androideabi-objdump
+<code>
+/toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-objdump -S -D /obj/local/armeabi-v7a/libhello-jni.so &gt; /Desktop/dump.log
+</code></p></li>
+<li><p>日志分析&ndash;ndk-stack
+<code>
+adb logcat | ndk-stack -sym /obj/local/armeabi-v7a  
+</code></p></li>
 </ol>
 
-
-<pre><code class="``">  /toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-addr2line -e /obj/local/armeabi-v7a/libhello-jni.so 00000cf4 00000d1c
-</code></pre>
-
-<ol>
-<li>日志分析&ndash;arm-linux-androideabi-objdump</li>
-</ol>
-
-
-<pre><code class="``">  /toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-objdump -S -D /obj/local/armeabi-v7a/libhello-jni.so &gt; /Desktop/dump.log
-</code></pre>
-
-<ol>
-<li>日志分析&ndash;ndk-stack</li>
-</ol>
-
-
-<pre><code class="``">  adb logcat | ndk-stack -sym /obj/local/armeabi-v7a  
-</code></pre>
 ]]></content>
   </entry>
   
