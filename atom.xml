@@ -4,7 +4,7 @@
   <title><![CDATA[James Guo Blog]]></title>
   <link href="http://jamesguo.github.io/atom.xml" rel="self"/>
   <link href="http://jamesguo.github.io/"/>
-  <updated>2015-07-03T17:24:46+08:00</updated>
+  <updated>2015-07-03T17:26:44+08:00</updated>
   <id>http://jamesguo.github.io/</id>
   <author>
     <name><![CDATA[James Guo]]></name>
@@ -14,18 +14,13 @@
 
   
   <entry>
-    <title type="html"><![CDATA[NDK开发常见错误]]></title>
+    <title type="html"><![CDATA[NDK开发常见错误（持续更新……）]]></title>
     <link href="http://jamesguo.github.io/blog/2015/07/03/ndkkai-fa-chang-jian-cuo-wu/"/>
     <updated>2015-07-03T15:00:02+08:00</updated>
     <id>http://jamesguo.github.io/blog/2015/07/03/ndkkai-fa-chang-jian-cuo-wu</id>
-    <content type="html"><![CDATA[<h3>NDK编译问题（持续更新……）</h3>
+    <content type="html"><![CDATA[<h3>GetEnv问题</h3>
 
-<h3>GetEnv问题</h3>
-
-<ol>
-<li>C++ 使用代码格式</li>
-</ol>
-
+<h4>C++ 使用代码格式</h4>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -33,10 +28,7 @@
 </span><span class='line'>int getEnvStat = vm-&gt;GetEnv((void **) &env, JNI_VERSION_1_6);</span></code></pre></td></tr></table></div></figure>
 
 
-<ol>
-<li>C 使用代码格式</li>
-</ol>
-
+<h4>C 使用代码格式</h4>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -51,10 +43,7 @@
 
 <h3>日志输出</h3>
 
-<ol>
-<li>日志定义</li>
-</ol>
-
+<h4>日志定义</h4>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -66,21 +55,20 @@
 
 <h3>Crash分析</h3>
 
-<ol>
-<li><p>日志分析&ndash;arm-linux-androideabi-addr2line
-<code>
-/toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-addr2line -e /obj/local/armeabi-v7a/libhello-jni.so 00000cf4 00000d1c
-</code></p></li>
-<li><p>日志分析&ndash;arm-linux-androideabi-objdump
-<code>
-/toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-objdump -S -D /obj/local/armeabi-v7a/libhello-jni.so &gt; /Desktop/dump.log
-</code></p></li>
-<li><p>日志分析&ndash;ndk-stack
-<code>
-adb logcat | ndk-stack -sym /obj/local/armeabi-v7a  
-</code></p></li>
-</ol>
+<h4>日志分析&ndash;arm-linux-androideabi-addr2line</h4>
 
+<pre><code class="``">  /toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-addr2line -e /obj/local/armeabi-v7a/libhello-jni.so 00000cf4 00000d1c
+</code></pre>
+
+<h4>日志分析&ndash;arm-linux-androideabi-objdump</h4>
+
+<pre><code class="``">  /toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-objdump -S -D /obj/local/armeabi-v7a/libhello-jni.so &gt; /Desktop/dump.log
+</code></pre>
+
+<h4>日志分析&ndash;ndk-stack</h4>
+
+<pre><code class="``">  adb logcat | ndk-stack -sym /obj/local/armeabi-v7a  
+</code></pre>
 ]]></content>
   </entry>
   

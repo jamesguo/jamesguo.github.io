@@ -5,14 +5,16 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>NDK开发常见错误 - James Guo Blog</title>
+  <title>NDK开发常见错误（持续更新……） - James Guo Blog</title>
   <meta name="author" content="James Guo">
 
   
-  <meta name="description" content="NDK编译问题（持续更新……） GetEnv问题 C++ 使用代码格式 1
+  <meta name="description" content="GetEnv问题 C++ 使用代码格式 1
 2
 clazz = env-&gt;FindClass(env,kClassBoa);
-int getEnvStat = vm-&gt;GetEnv((void **) &env, JNI_VERSION_1_6); C &hellip;">
+int getEnvStat = vm-&gt;GetEnv((void **) &env, JNI_VERSION_1_6); C 使用代码格式 1
+2
+clazz &hellip;">
   
   <meta name="baidu-site-verification" content="iDlNtMGP4g" />
   <!-- http://t.co/dKP3o1e -->
@@ -93,7 +95,7 @@ $(document).bind('DOMNodeInserted', function(event) {
   
   <header>
     
-      <h1 class="entry-title">NDK开发常见错误</h1>
+      <h1 class="entry-title">NDK开发常见错误（持续更新……）</h1>
     
     
       <p class="meta">
@@ -109,14 +111,9 @@ $(document).bind('DOMNodeInserted', function(event) {
   </header>
 
 
-<div class="entry-content"><h3>NDK编译问题（持续更新……）</h3>
+<div class="entry-content"><h3>GetEnv问题</h3>
 
-<h3>GetEnv问题</h3>
-
-<ol>
-<li>C++ 使用代码格式</li>
-</ol>
-
+<h4>C++ 使用代码格式</h4>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -124,10 +121,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 </span><span class='line'>int getEnvStat = vm-&gt;GetEnv((void **) &env, JNI_VERSION_1_6);</span></code></pre></td></tr></table></div></figure>
 
 
-<ol>
-<li>C 使用代码格式</li>
-</ol>
-
+<h4>C 使用代码格式</h4>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -142,10 +136,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 <h3>日志输出</h3>
 
-<ol>
-<li>日志定义</li>
-</ol>
-
+<h4>日志定义</h4>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -157,21 +148,20 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 <h3>Crash分析</h3>
 
-<ol>
-<li><p>日志分析&ndash;arm-linux-androideabi-addr2line
-<code>
-/toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-addr2line -e /obj/local/armeabi-v7a/libhello-jni.so 00000cf4 00000d1c
-</code></p></li>
-<li><p>日志分析&ndash;arm-linux-androideabi-objdump
-<code>
-/toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-objdump -S -D /obj/local/armeabi-v7a/libhello-jni.so &gt; /Desktop/dump.log
-</code></p></li>
-<li><p>日志分析&ndash;ndk-stack
-<code>
-adb logcat | ndk-stack -sym /obj/local/armeabi-v7a  
-</code></p></li>
-</ol>
+<h4>日志分析&ndash;arm-linux-androideabi-addr2line</h4>
 
+<pre><code class="``">  /toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-addr2line -e /obj/local/armeabi-v7a/libhello-jni.so 00000cf4 00000d1c
+</code></pre>
+
+<h4>日志分析&ndash;arm-linux-androideabi-objdump</h4>
+
+<pre><code class="``">  /toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-objdump -S -D /obj/local/armeabi-v7a/libhello-jni.so &gt; /Desktop/dump.log
+</code></pre>
+
+<h4>日志分析&ndash;ndk-stack</h4>
+
+<pre><code class="``">  adb logcat | ndk-stack -sym /obj/local/armeabi-v7a  
+</code></pre>
 </div>
 
 
@@ -248,7 +238,7 @@ var jiathis_config = {data_track_clickback:'true'};
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2015/07/03/ndkkai-fa-chang-jian-cuo-wu/">NDK开发常见错误</a>
+        <a href="/blog/2015/07/03/ndkkai-fa-chang-jian-cuo-wu/">NDK开发常见错误（持续更新……）</a>
       </li>
     
       <li class="post">
