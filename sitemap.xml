@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://jamesguo.github.io/blog/2015/07/24/androidjie-ping/</loc>
+    <lastmod>2015-07-24T16:58:37+08:00</lastmod>
+  </url>
+  <url>
+    <loc>http://jamesguo.github.io/blog/2015/07/08/androidxia-soxiang-guan-xin-xi-cha-kan/</loc>
+    <lastmod>2015-07-08T09:43:34+08:00</lastmod>
+  </url>
+  <url>
+    <loc>http://jamesguo.github.io/blog/2015/07/04/android-makefilezheng-li/</loc>
+    <lastmod>2015-07-04T22:09:58+08:00</lastmod>
+  </url>
+  <url>
     <loc>http://jamesguo.github.io/blog/2015/07/03/ndkkai-fa-chang-jian-cuo-wu/</loc>
     <lastmod>2015-07-03T15:00:02+08:00</lastmod>
   </url>

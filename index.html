@@ -9,12 +9,8 @@
   <meta name="author" content="James Guo">
 
   
-  <meta name="description" content="GetEnv问题 C++ 使用代码格式 1
-2
-clazz = env-&gt;FindClass(env,kClassBoa);
-int getEnvStat = vm-&gt;GetEnv((void **) &env, JNI_VERSION_1_6); C 使用代码格式 1
-2
-clazz &hellip;">
+  <meta name="description" content="
+">
   
   <meta name="baidu-site-verification" content="iDlNtMGP4g" />
   <!-- http://t.co/dKP3o1e -->
@@ -92,6 +88,153 @@ $(document).bind('DOMNodeInserted', function(event) {
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/07/24/androidjie-ping/">Android截屏</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-07-24T16:58:37+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>4:58 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/07/08/androidxia-soxiang-guan-xin-xi-cha-kan/">Android下SO相关信息查看</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-07-08T09:43:34+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>9:43 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>arm-linux-androideabi-objdump /Users/james/Work/workspace/jniproject/android_hook/hook_so/libs/armeabi/libhook.so -S -j.got</p>
+
+<p>/Users/james/Work/workspace/jniproject/android_hook/hook_so/libs/armeabi/libhook.so:     file format elf32-littlearm</p>
+
+<p>Disassembly of section .got:</p>
+
+<p>00003fb8 &lt;.got>:
+    3fb8:   000017d4    ldrdeq  r1, [r0], -r4
+    3fbc:   000017dc    ldrdeq  r1, [r0], -ip
+    3fc0:   000017e4    andeq   r1, r0, r4, ror #15
+    3fc4:   00000000    andeq   r0, r0, r0
+    3fc8:   000022f4    strdeq  r2, [r0], -r4
+    3fcc:   000021e4    andeq   r2, r0, r4, ror #3
+    &hellip;
+    3fe0:   00000b98    muleq   r0, r8, fp
+    3fe4:   00000b98    muleq   r0, r8, fp
+    3fe8:   00000b98    muleq   r0, r8, fp
+    3fec:   00000b98    muleq   r0, r8, fp
+    3ff0:   00000b98    muleq   r0, r8, fp
+    3ff4:   00000b98    muleq   r0, r8, fp
+    3ff8:   00000b98    muleq   r0, r8, fp
+    3ffc:   00000b98    muleq   r0, r8, fp</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/07/04/android-makefilezheng-li/">Android MakeFile整理</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-07-04T22:09:58+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>4</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>10:09 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h5>LOCAL_PATH配置</h5>
+
+<p>  LOCAL_PATH := $(call my-dir)</p>
+
+<h5>include配置</h5>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>include $(CLEAR_VARS)
+</span><span class='line'>
+</span><span class='line'>...
+</span><span class='line'>
+</span><span class='line'>include $(BUILD_SHARED_LIBRARY)
+</span><span class='line'>
+</span><span class='line'>include $(BUILD_STATIC_LIBRARY)
+</span><span class='line'>
+</span><span class='line'>include $(BUILD_EXECUTABLE)</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>LOCAL_MODULE配置</h5>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>LOCAL_MODULE    := module名称
+</span><span class='line'>
+</span><span class='line'>LOCAL_MODULE_TAGS := optional</span></code></pre></td></tr></table></div></figure>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/07/04/android-makefilezheng-li/">阅读更多 →</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -305,19 +448,23 @@ $(document).bind('DOMNodeInserted', function(event) {
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/07/24/androidjie-ping/">Android截屏</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/07/08/androidxia-soxiang-guan-xin-xi-cha-kan/">Android下SO相关信息查看</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/07/04/android-makefilezheng-li/">Android MakeFile整理</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/07/03/ndkkai-fa-chang-jian-cuo-wu/">NDK开发常见错误（持续更新……）</a>
       </li>
     
       <li class="post">
         <a href="/blog/2015/07/03/jnilei-xing-zong-jie/">JNI类型总结</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/07/02/android-native-crashshou-ji/">Android Native Crash收集</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/07/02/kai-pian/">开篇</a>
       </li>
     
   </ul>
