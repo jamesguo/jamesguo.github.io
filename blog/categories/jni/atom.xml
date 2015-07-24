@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Jni | James Guo Blog]]></title>
   <link href="http://jamesguo.github.io/blog/categories/jni/atom.xml" rel="self"/>
   <link href="http://jamesguo.github.io/"/>
-  <updated>2015-07-24T16:59:32+08:00</updated>
+  <updated>2015-07-24T17:09:26+08:00</updated>
   <id>http://jamesguo.github.io/</id>
   <author>
     <name><![CDATA[James Guo]]></name>
@@ -12,6 +12,115 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Android截屏]]></title>
+    <link href="http://jamesguo.github.io/blog/2015/07/24/androidjie-ping/"/>
+    <updated>2015-07-24T16:58:37+08:00</updated>
+    <id>http://jamesguo.github.io/blog/2015/07/24/androidjie-ping</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Android下SO相关信息查看]]></title>
+    <link href="http://jamesguo.github.io/blog/2015/07/08/androidxia-soxiang-guan-xin-xi-cha-kan/"/>
+    <updated>2015-07-08T09:43:34+08:00</updated>
+    <id>http://jamesguo.github.io/blog/2015/07/08/androidxia-soxiang-guan-xin-xi-cha-kan</id>
+    <content type="html"><![CDATA[<p>arm-linux-androideabi-objdump /Users/james/Work/workspace/jniproject/android_hook/hook_so/libs/armeabi/libhook.so -S -j.got</p>
+
+<p>/Users/james/Work/workspace/jniproject/android_hook/hook_so/libs/armeabi/libhook.so:     file format elf32-littlearm</p>
+
+<p>Disassembly of section .got:</p>
+
+<p>00003fb8 &lt;.got>:
+    3fb8:   000017d4    ldrdeq  r1, [r0], -r4
+    3fbc:   000017dc    ldrdeq  r1, [r0], -ip
+    3fc0:   000017e4    andeq   r1, r0, r4, ror #15
+    3fc4:   00000000    andeq   r0, r0, r0
+    3fc8:   000022f4    strdeq  r2, [r0], -r4
+    3fcc:   000021e4    andeq   r2, r0, r4, ror #3
+    &hellip;
+    3fe0:   00000b98    muleq   r0, r8, fp
+    3fe4:   00000b98    muleq   r0, r8, fp
+    3fe8:   00000b98    muleq   r0, r8, fp
+    3fec:   00000b98    muleq   r0, r8, fp
+    3ff0:   00000b98    muleq   r0, r8, fp
+    3ff4:   00000b98    muleq   r0, r8, fp
+    3ff8:   00000b98    muleq   r0, r8, fp
+    3ffc:   00000b98    muleq   r0, r8, fp</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Android MakeFile整理]]></title>
+    <link href="http://jamesguo.github.io/blog/2015/07/04/android-makefilezheng-li/"/>
+    <updated>2015-07-04T22:09:58+08:00</updated>
+    <id>http://jamesguo.github.io/blog/2015/07/04/android-makefilezheng-li</id>
+    <content type="html"><![CDATA[<h5>LOCAL_PATH配置</h5>
+
+<p>  LOCAL_PATH := $(call my-dir)</p>
+
+<h5>include配置</h5>
+
+<pre><code>include $(CLEAR_VARS)
+
+...
+
+include $(BUILD_SHARED_LIBRARY)
+
+include $(BUILD_STATIC_LIBRARY)
+
+include $(BUILD_EXECUTABLE)
+</code></pre>
+
+<h5>LOCAL_MODULE配置</h5>
+
+<pre><code>LOCAL_MODULE    := module名称
+
+LOCAL_MODULE_TAGS := optional
+</code></pre>
+
+<!--more-->
+
+
+<h5>LOCAL_SRC_FILES配置</h5>
+
+<pre><code>
+LOCAL_SRC_FILES := ../util.c ../hook.c ../base.c
+</code></pre>
+
+<h5>LOCAL_ARM_MODE配置</h5>
+
+<pre><code>
+LOCAL_ARM_MODE := arm/Thumb
+</code></pre>
+
+<h5>LOCAL_C_INCLUDES配置</h5>
+
+<pre><code>
+LOCAL_C_INCLUDES := ../util.c ../hook.c ../base.c
+
+LOCAL_C_INCLUDES += \
+     $(JNI_H_INCLUDE)\
+     /Volumes/Android/android_src_4.4.4_r2/prebuilts/ndk/9/platforms/android-14/arch-arm/usr/include
+</code></pre>
+
+<h5>LOCAL_CFLAGS配置</h5>
+
+<pre><code>
+LOCAL_SRC_FILES := ../util.c ../hook.c ../base.c
+</code></pre>
+
+<h5>LOCAL_LDLIBS配置</h5>
+
+<pre><code>
+LOCAL_LDLIBS := -L$(SYSROOT)/usr/lib -llog
+
+-L代表文件夹路径
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[NDK开发常见错误（持续更新……）]]></title>
